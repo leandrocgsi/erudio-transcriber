@@ -13,6 +13,7 @@ class DriverGroup(StrEnum):
     SLIDE_DETECTOR = "erudio_transcriber.slide_detectors"
     FRAME_EXTRACTOR = "erudio_transcriber.frame_extractors"
     THERMAL_SENSOR = "erudio_transcriber.thermal_sensors"
+    VOCABULARY_SOURCE = "erudio_transcriber.vocabulary_sources"
 
 
 class DriverNotFoundError(LookupError):

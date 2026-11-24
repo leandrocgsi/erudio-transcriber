@@ -1,6 +1,6 @@
 from pathlib import Path
 
-VIDEO_EXTENSIONS = frozenset({".mp4", ".mkv", ".mov", ".webm", ".ts"})
+VIDEO_EXTENSIONS = frozenset({".mp4", ".mkv", ".mov", ".webm", ".ts", ".avi"})
 
 
 def find_videos(target: Path) -> tuple[Path, ...]:

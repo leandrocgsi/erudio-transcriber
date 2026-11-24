@@ -19,5 +19,5 @@ def test_render_srt_numbers_blocks_from_one() -> None:
     assert render_srt(SEGMENTS) == expected
 
 
-def test_render_txt_prefixes_each_line_with_the_start_time() -> None:
-    assert render_txt(SEGMENTS) == "[00:00:00] Hello\n[01:01:01] World\n"
+def test_render_txt_has_one_line_per_segment_without_timestamps() -> None:
+    assert render_txt(SEGMENTS) == "Hello\nWorld\n"

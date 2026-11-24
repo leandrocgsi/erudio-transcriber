@@ -112,7 +112,7 @@ Reference implementation of everything above: `D:\Code\- CourseSkills\erudio-too
   taken from `vocab.txt` (best terms first, about 600 characters).
 - Output mirrors the source tree under the output root; the source folder is read-only. The `.txt` is
   written last and acts as the completion marker; mp3 goes through a `.part` file and an atomic rename.
-- Outputs are `<name>.mp3`, `<name>.srt`, `<name>.txt` (lines `[HH:MM:SS] text`), no `.transcricao` suffix,
+- Outputs are `<name>.mp3`, `<name>.srt`, `<name>.txt` (one segment per line, no timestamps: the srt has them), no `.transcricao` suffix,
   and `<name>.frames/` with a `.done` marker.
 - Slide frames: sample every 2 s, mean absolute difference over 128x72 gray frames above 12, merge changes
   closer than 6 s, take the frame about 1 s after the change, drop near-duplicates, always keep the first

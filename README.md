@@ -66,7 +66,7 @@ OUTPUT/
   <same folders as SOURCE>/
     lesson.mp3               mono 16 kHz audio
     lesson.srt               subtitles
-    lesson.txt               lines like "[00:01:23] text", written last (completion marker)
+    lesson.txt               plain text, one segment per line, written last (completion marker)
     lesson.frames/           slide-change frames named HH-MM-SS.jpg, plus a .done marker
 ```
 A video is considered finished when its `txt` and `srt` exist (and, with frames enabled, the `.done`

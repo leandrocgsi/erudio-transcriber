@@ -77,7 +77,7 @@ def test_queue_writes_every_output_and_a_rerun_skips_everything(tmp_path: Path) 
     first = run_queue(request, toolkit, gate, SilentSink())
     assert (first.processed, first.skipped, first.failed) == (2, 0, ())
     folder = output / "module"
-    assert (folder / "a.txt").read_text(encoding="utf-8") == "[00:00:00] hello\n"
+    assert (folder / "a.txt").read_text(encoding="utf-8") == "hello\n"
     assert (folder / "a.frames" / ".done").is_file()
     assert (folder / "a.frames" / "00-00-11.jpg").is_file()
     second = run_queue(request, toolkit, gate, SilentSink())

@@ -12,7 +12,7 @@ def choose_folder(parent: QWidget) -> str:
 
 def choose_video(parent: QWidget) -> str:
     path, _ = QFileDialog.getOpenFileName(
-        parent, "Choose a video", "", "Videos (*.mp4 *.mkv *.mov *.webm *.ts)"
+        parent, "Choose a video", "", "Videos (*.mp4 *.mkv *.mov *.webm *.ts *.avi)"
     )
     return path
 

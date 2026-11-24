@@ -35,4 +35,4 @@ def render_srt(segments: Sequence[Segment]) -> str:
 
 
 def render_txt(segments: Sequence[Segment]) -> str:
-    return "".join(f"[{clock(segment.start)}] {segment.text}\n" for segment in segments)
+    return "".join(f"{segment.text}\n" for segment in segments)

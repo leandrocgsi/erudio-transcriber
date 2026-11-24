@@ -9,6 +9,8 @@ dependencies = ["numpy>=1.26"]
 [project.scripts]
 erudio-transcriber = "erudio_transcriber.cli:main"
 
+erudio-transcriber-vocab = "erudio_transcriber.vocabulary_cli:main"
+
 [project.gui-scripts]
 erudio-transcriber-gui = "erudio_transcriber.ui.qt.app:main"
 
@@ -26,6 +28,9 @@ ffmpeg = "erudio_transcriber.drivers.ffmpeg_frames:create_frame_extractor"
 
 [project.entry-points."erudio_transcriber.thermal_sensors"]
 nvidia-smi = "erudio_transcriber.drivers.nvidia_smi:create_thermal_sensor"
+
+[project.entry-points."erudio_transcriber.vocabulary_sources"]
+documents = "erudio_transcriber.drivers.document_text:create_document_source"
 
 [project.optional-dependencies]
 whisper = ["faster-whisper>=1.1", "nvidia-cublas-cu12", "nvidia-cudnn-cu12"]
